@@ -1,0 +1,19 @@
+mongodb
+creating databse: use databasename
+creating collection/table:db.createCollection("collectionname");
+creating document/data:db.collectionname.insertOne({name:"ejoa",age:30})
+searching specific person:db.students.find({name:"Enjoa"})
+searching all ducments:db.students.find()
+to update one document:db.students.updateOne({name:"Enjoa"},{$set:{age:10}})
+to delete one document:db.students.deleteOne({name:"Enjoa"})
+to insert many documents:db.students.insertMany([{name:"ashwaq",age:18},{name:"mawliid",age:22},{name:"umaymo mohamad",age:2,tell:"245244"},{name:"ruwaydo mohamad",age:2}])
+to update multiple documents once:db.students.updateMany({},{$inc:{age:1}})
+if not exist add now:db.students.updateOne({name:"ashwaq qrux"},{$set:{age:"nuur",name:"rahmo qrux"}},{upsert:true})
+to delete multiple document:db.students.deleteMany({age:{$lt:10}})
+to use or operator :db.students.find({$or:[{name:"Enjoa"},{name:"mawliid"}]})
+to get name start with word r:db.students.find({name:/^r/})
+to make desceding:db.students.find().sort({age:-1})
+to make ascending:db.students.find().sort({age:1})
+
+
+meelkasta oo aad ku aragtid students wa collection name
